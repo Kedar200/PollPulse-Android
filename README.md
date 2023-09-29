@@ -1,7 +1,5 @@
-# GDSC-Android
-# Android App Project - Installation Guide for Android Studio
-
-## Installation
+For Your Refrence You can use this figma design 
+[View Figma Design](https://www.figma.com/file/HpiwGmhxBRnVoKXqXHI3qo/Institute-Voting-App?type=design&node-id=0-1&mode=design&t=RZNBNDdcNOgSMBna-0)
 
 To build and run this Android app project in Android Studio on your local machine, follow these steps:
 
