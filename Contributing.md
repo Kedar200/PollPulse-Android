@@ -9,9 +9,6 @@ Thank you for your interest in contributing to PollPulse! We appreciate your hel
     - [Suggesting Enhancements](#suggesting-enhancements)
     - [Contributing Code](#contributing-code)
 2. [Getting Started](#getting-started)
-3. [Code of Conduct](#code-of-conduct)
-4. [License](#license)
-
 ## How to Contribute
 
 There are several ways you can contribute to this project:
