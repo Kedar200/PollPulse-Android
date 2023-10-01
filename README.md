@@ -1,6 +1,8 @@
 For Your Refrence You can use this figma design 
 [View Figma Design](https://www.figma.com/file/KAAj6qMlkKJ0HG39omnXkP/Voting-app?type=design&node-id=0%3A1&mode=dev)
+
 **Credits to Sanjeevani Lakade for the Figma design.**
+
 To build and run this Android app project in Android Studio on your local machine, follow these steps:
 
 1. Clone this repository using Android Studio:
