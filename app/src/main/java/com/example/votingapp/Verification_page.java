@@ -2,19 +2,19 @@ package com.example.votingapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.chaos.view.PinView;
-import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 public class Verification_page extends AppCompatActivity {
     PinView pinView;
@@ -44,41 +44,45 @@ public class Verification_page extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 if(charSequence.toString().length()==6 ){
-                    button.setOnClickListener(btn_clikck());
+                    button.setOnClickListener(this::btn_click);
 
+                }
+                else{
+                    button.setOnClickListener(this::show);
                 }
 
 
+
             }
+
+            private void btn_click(View view) {
+                click(view);
+            }
+            private void show(View view){
+                Toast.makeText(Verification_page.this, "Please enter the pin", Toast.LENGTH_SHORT).show();
+            }
+
 
             @Override
             public void afterTextChanged(Editable editable){
 
 
-
-
             }
+
+
         });
+
 
     }
 
-    View.OnClickListener btn_clikck(){
-        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
-        builder.setIcon(R.drawable.img);
-        builder.setMessage("You’re Verified");
-        builder.setMessage("Your account is verified,\n" +
-                "let’s start!");
-        builder.setNeutralButton("Get started", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // Handle the neutral button action here
-                dialog.dismiss();
-            }
-        });
-        builder.show();
-
-        return null;
+    private void click(View view) {
+        Dialog dialog=new Dialog(this);
+        dialog.setContentView(R.layout.custom_dialog);
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.setCancelable(true);
+        dialog.show();
     }
+
 
 
 
